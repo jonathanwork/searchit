@@ -29,8 +29,6 @@
     "babel-preset-stage-0": "^6.24.1"
   },
   "dependencies": {
-    "diskdb": "^0.1.17",
-    "nightmare": "^2.10.0",
-    "redis": "^2.8.0"
+    "nightmare": "^2.10.0"
   }
 }
