@@ -1,0 +1,5 @@
+.node_modules
+.codelite
+.tern-port
+.tern-project
+mon.workspace
