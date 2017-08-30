@@ -1,5 +1,4 @@
-.node_modules/*
-.codelite/*
-.tern-port/*
-.tern-project/*
-mon.workspace/*
+.gitignore
+node_modules
+mon.workspace
+.codelite
