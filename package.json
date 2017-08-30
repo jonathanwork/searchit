@@ -1,5 +1,5 @@
 {
-  "name": "google-search",
+  "name": "searchIt",
   "version": "1.0.0",
   "description": "google search it gives back head lines",
   "main": "./server/gSearch.js",
@@ -15,7 +15,7 @@
     }
   },
   "keywords": [
-    ""
+    "search engine search"
   ],
   "author": "Jonathan R. Lopez",
   "license": "MIT",
