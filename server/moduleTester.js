@@ -1,5 +1,5 @@
 'use strict';
 
-var _gSearch = require('./gSearch');
+var _searchIt = require('searchIt');
 
-(0, _gSearch.lookUp)('http://google.com', 'wow');
+_searchIt.searchIt.gLookUp('http://google.com', 'wow');
