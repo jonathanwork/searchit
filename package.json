@@ -17,7 +17,7 @@
   "keywords": [
     ""
   ],
-  "author": "",
+  "author": "Jonathan R. Lopez",
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.26.0",
