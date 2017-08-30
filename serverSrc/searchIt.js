@@ -1,9 +1,14 @@
+//Author Jonathan R. Lopez
 import Nightmare from 'nightmare';
+import diskdb from 'diskdb';
+
 
 let nightmare = Nightmare({show: true});
+let searchIt = {};
+
 
 //simple google look up
-const gLookUp = async (gUrl, topic) => {
+searchIt.gLookUp = async (gUrl, topic) => {
 		try {
 			await nightmare
 				.goto(gUrl)
@@ -26,12 +31,10 @@ const gLookUp = async (gUrl, topic) => {
 //					we have to enter database here
 //					we return in in console.log
 					}))
-
-			}
+			} //end of try
 			catch(err){
 				console.log("there was and error : -> " + err);
 			}
 	};
 
-
-export {gLookUp}
+export {searchIt}

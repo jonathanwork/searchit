@@ -1,3 +1,3 @@
-import {lookUp} from './gSearch';
+import {searchIt} from 'searchIt';
 
-lookUp('http://google.com', 'wow');
+searchIt.gLookUp('http://google.com', 'wow');
