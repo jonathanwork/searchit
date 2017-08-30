@@ -1,10 +1,5 @@
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-exports.searchIt = undefined;
-
 var _regenerator = require('babel-runtime/regenerator');
 
 var _regenerator2 = _interopRequireDefault(_regenerator);
@@ -21,57 +16,65 @@ var _diskdb = require('diskdb');
 
 var _diskdb2 = _interopRequireDefault(_diskdb);
 
+var _redis = require('redis');
+
+var _redis2 = _interopRequireDefault(_redis);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-//Author Jonathan R. Lopez
-var nightmare = (0, _nightmare2.default)({ show: true });
-var searchIt = {};
+var nightmare = (0, _nightmare2.default)({ show: false });
 
 //simple google look up
-searchIt.gLookUp = function () {
-	var _ref = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee(gUrl, topic) {
-		return _regenerator2.default.wrap(function _callee$(_context) {
-			while (1) {
-				switch (_context.prev = _context.next) {
-					case 0:
-						_context.prev = 0;
-						_context.next = 3;
-						return nightmare.goto(gUrl).title().type('#lst-ib', topic).click('#tsf > div.tsf-p > div.jsb > center > input[type="submit"]:nth-child(1)').evaluate(function () {
-							var innerTextArray = [];
-							var innerText = document.querySelectorAll('div > div > div > div > div > h3 > a');
-							for (var i = 0; i < innerText.length; i++) {
-								innerTextArray.push(innerText[i].text);
-							};
+//Author Jonathan R. Lopez
+var searchIt = {
+	gLookUp: function () {
+		var _ref = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee(searchContext) {
+			return _regenerator2.default.wrap(function _callee$(_context) {
+				while (1) {
+					switch (_context.prev = _context.next) {
+						case 0:
 
-							return innerTextArray;
-						}).end().then(function (result) {
-							//we deliver content here
-							console.log(result);
-							//					we have to enter database here
-							//					we return in in console.log
-						});
+							console.log("running gLookUp...");
+							_context.prev = 1;
+							_context.next = 4;
+							return nightmare.goto("http://google.com").title().type('#lst-ib', searchContext).click('#tsf > div.tsf-p > div.jsb > center > input[type="submit"]:nth-child(1)').evaluate(function () {
+								var innerTextArray = [];
+								var innerText = document.querySelectorAll('div > div > div > div > div > h3 > a');
+								for (var i = 0; i < innerText.length; i++) {
+									innerTextArray.push(innerText[i].text);
+								};
 
-					case 3:
-						_context.next = 8;
-						break;
+								return innerTextArray;
+							}).end().then(function (result) {
+								//we deliver content here
+								console.log(result);
 
-					case 5:
-						_context.prev = 5;
-						_context.t0 = _context['catch'](0);
+								//					we have to enter database here
+								//					we return in in console.log
+							});
 
-						console.log("there was and error : -> " + _context.t0);
+						case 4:
+							_context.next = 9;
+							break;
 
-					case 8:
-					case 'end':
-						return _context.stop();
+						case 6:
+							_context.prev = 6;
+							_context.t0 = _context['catch'](1);
+
+							console.log("there was and error : -> " + _context.t0);
+
+						case 9:
+						case 'end':
+							return _context.stop();
+					}
 				}
-			}
-		}, _callee, undefined, [[0, 5]]);
-	}));
+			}, _callee, undefined, [[1, 6]]);
+		}));
 
-	return function (_x, _x2) {
-		return _ref.apply(this, arguments);
-	};
-}();
+		return function gLookUp(_x) {
+			return _ref.apply(this, arguments);
+		};
+	}()
+};
 
-exports.searchIt = searchIt;
+module.exports = searchIt;

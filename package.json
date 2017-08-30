@@ -2,9 +2,9 @@
   "name": "searchIt",
   "version": "1.0.0",
   "description": "google search it gives back head lines",
-  "main": "./server/gSearch.js",
+  "main": "./server/searchIt.js",
   "scripts": {
-    "start": "node ./server/moduleTester.js",
+    "start": "node ./server/searchIt.js",
     "build": "babel -d ./server/ ./serverSrc/"
   },
   "babel": {
