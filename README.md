@@ -18,5 +18,9 @@ how to use basics
         searchit.end(); //use this to finish electron
         });
 ```
+support
+ethereum support
+
+#### 0xefc76a48c9b8899328937b53fb7f05442e3aa6f4
 
 
