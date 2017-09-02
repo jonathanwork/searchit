@@ -1,10 +1,10 @@
 {
-  "name": "searchIt",
+  "name": "searchit",
   "version": "1.0.0",
   "description": "google search it gives back head lines",
-  "main": "./server/searchIt.js",
+  "main": "./server/searchit.js",
   "scripts": {
-    "start": "node ./server/searchIt.js",
+    "start": "node ./server/searchit.js",
     "build": "babel -d ./server/ ./serverSrc/"
   },
   "babel": {

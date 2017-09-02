@@ -6,7 +6,7 @@ let nightmare = Nightmare({show: false});
 
 
 //simple google look up
-let searchIt = {
+let searchit = {
 	//google look up
 	gLookUpTitles: async (searchContext, next) => {
 		try {
@@ -103,4 +103,4 @@ let searchIt = {
 		}
 };
 
-module.exports = searchIt;
+module.exports = searchit;

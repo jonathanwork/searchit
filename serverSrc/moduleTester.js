@@ -1,4 +1,4 @@
-import searchIt from './searchIt'; 
+import searchIt from './searchit'; 
 
 searchIt.gLookUpTitles('awesome links', (result)=> {
 	//return results anyway you want

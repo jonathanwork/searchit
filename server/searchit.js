@@ -18,7 +18,7 @@ var nightmare = (0, _nightmare2.default)({ show: false });
 
 //simple google look up
 //Author Jonathan R. Lopez
-var searchIt = {
+var searchit = {
 	//google look up
 	gLookUpTitles: function () {
 		var _ref = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee(searchContext, next) {
@@ -194,4 +194,4 @@ var searchIt = {
 	}()
 };
 
-module.exports = searchIt;
+module.exports = searchit;
