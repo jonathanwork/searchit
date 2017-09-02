@@ -1,11 +1,21 @@
 {
   "name": "searchit",
   "version": "1.0.0",
-  "description": "google search it gives back head lines",
+  "description": "searching search engines",
+  "author": "Jonathan R. Lopez",
+  "email": "jonathanwork856@hotmail.com",
   "main": "./server/searchit.js",
   "scripts": {
     "start": "node ./server/searchit.js",
     "build": "babel -d ./server/ ./serverSrc/"
+  },
+  "bugs": {
+    "url" : "https://github.com/jonathanwork/searchit/issues",
+    "email" : "jonathanwork856@hotmail.com"
+  },
+  "repository" :{ 
+    "type" : "git"
+    , "url" : "https://github.com/jonathanwork/searchit"
   },
   "babel": {
     "development": {
@@ -17,7 +27,6 @@
   "keywords": [
     "search engine search"
   ],
-  "author": "Jonathan R. Lopez",
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
