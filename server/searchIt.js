@@ -12,14 +12,6 @@ var _nightmare = require('nightmare');
 
 var _nightmare2 = _interopRequireDefault(_nightmare);
 
-var _diskdb = require('diskdb');
-
-var _diskdb2 = _interopRequireDefault(_diskdb);
-
-var _redis = require('redis');
-
-var _redis2 = _interopRequireDefault(_redis);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var nightmare = (0, _nightmare2.default)({ show: false });
@@ -200,30 +192,6 @@ var searchIt = {
 			return _ref5.apply(this, arguments);
 		};
 	}()
-	//bing lookup
-	//	bLookUp: async (searchContext, next) => {
-	//		try {
-	//			await nightmare
-	//				.goto("http://google.com")
-	//				.title()
-	//				.type('#lst-ib', searchContext)
-	//				.click('#tsf > div.tsf-p > div.jsb > center > input[type="submit"]:nth-child(1)')
-	//				.evaluate(()=> {
-	//					var innerTextArray = [];
-	//					var innerText = document.querySelectorAll('#rso > div > div > div > div > div > h3 > a');
-	//					for( var i = 0;i < innerText.length;i++ ) {
-	//						innerTextArray.push(innerText[i].text);
-	//						}; 
-	//						
-	//					return innerTextArray;
-	//					})
-	//				.end()
-	//				.then(next);
-	//			} //end of try
-	//			catch(err){
-	//				console.log("there was and error : -> " + err);
-	//			}
-	//	}
 };
 
 module.exports = searchIt;

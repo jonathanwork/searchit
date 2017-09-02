@@ -29,7 +29,7 @@ let searchIt = {
 			catch(err){
 				console.log("there was and error : -> " + err);
 			}
-	},
+		},
 	gLookUpAnchors: async (searchContext, next) => {
 		try {
 			await nightmare

@@ -1,6 +1,7 @@
-import searchIt from './searchIt';
+import searchIt from './searchIt'; 
 
-searchIt.bLookUpAnchors('works', (result)=> {
-	console.log(result);
-	searchIt.end();
-	})
+searchIt.gLookUpTitles('awesome links', (result)=> {
+	//return results anyway you want
+	console.log('awesome links -> ' + result);
+	searchIt.end(); //we it to finish executing
+	});
