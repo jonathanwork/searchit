@@ -10,12 +10,12 @@ this api is simple type what you want get data from search engines so far suppor
 
 how to use basics
 ```
-    var searchIt = require('searchIt');
+    var searchit = require('searchit');
     
-    searchIt.gLookUpTitles('awesome links', (result)=> {
+    searchit.gLookUpTitles('awesome links', (result)=> {
         //return results anyway you want
         console.log('awesome links -> ' + result);
-        searchIt.end(); //we it to finish executing
+        searchit.end(); //use this to finish electron
         });
 ```
 
